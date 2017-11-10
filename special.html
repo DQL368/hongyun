@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>专题页</title>
+		<link rel="stylesheet" href="scss/special.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<img src="img/zhaunti.png" />
+			<div class="arrow">
+				<a href="javascript:;" class="arrows"></a>
+				<a href="javascript:;" class="jiah">
+					<div class="more">
+						<img src="img/more.png" />
+					</div>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/auto-size.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	<script>
+		$('.jiah').click(function() {
+			$('.more').toggle();
+		});
+		$('.arrows').click(function(event) {
+			event.preventDefault();
+			if(window.history.length >= 1) {
+				window.history.back();
+			} else {
+				window.location.href = "index.html";
+			}
+		});
+	</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>密码设置</title>
+		<link rel="stylesheet" href="scss/setting.css" />
+	</head>
+
+	<body>
+		<div class="main">
+			<header>
+				<a href="login.html" class="arrow"></a>
+				<div style="clear: both;"></div>
+			</header>
+			<div class="content">
+				<div class="phone">
+					<input type="password" placeholder="输入六位数密码" id="phone"/>
+				</div>
+				<div class="show">
+					<span class="kuang"></span>
+					<span class="gou"></span>
+					<p>显示密码</p>
+				</div>
+				<div class="arr">
+					<a href="#" id="subm"></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/auto-size.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script>
+		//显示隐藏密码
+		$('.show').click(function() {
+			$('.gou').toggleClass('active');
+			if($('.gou').hasClass('active')) {
+				$('.phone input').attr('type', 'text');
+			} else {
+				$('.phone input').attr('type', 'password');
+			}
+		});
+		//变色
+		$('input').bind("input propertychange",function(){
+			var phone=$('#phone').val().length
+				if (phone==6) {
+				$('#subm').css({
+					'background':"url('img/imgs/fanhui-2.png')",
+					'background-size':'cover'
+				});
+			}
+		});
+		//密码验证
+		$('#subm').click(function() {
+			var phone = $('#phone');
+			var msg = "";
+			if($.trim(phone.val()) == "") {
+				msg = "密码不能为空！";
+				phone.focus();
+			} else if(!/^\w{6,20}$/.test($.trim(phone.val()))) {
+				msg = "密码格式不正确！请重新输入！";
+				phone.focus();
+			}
+			if(msg != "") {
+				alert(msg);
+			}else{
+				$('#subm').attr('href','login.html');
+			}
+		});
+		$("body").bind("touchmove",function(event){event.preventDefault();});
+	</script>
+</html>

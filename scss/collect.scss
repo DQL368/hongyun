@@ -1,0 +1,49 @@
+@import "all";
+.main{
+    width: 7.5rem;
+    position: relative;
+    header{
+        width: 6rem;
+        margin: 0.4rem auto;
+        text-align: center;
+        a{
+            display: block;
+            width: 0.2rem;
+            height: 0.36rem;
+            position: relative;
+            float: left;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        h2{
+            font-size: 0.36rem;
+            color: #333;
+            line-height: 0.36rem;
+        }
+    }
+    .content{
+        width: 100%;
+        position: relative;
+        .list{
+            width: 100%;
+        }
+        .remove{
+            width: 1.2rem;
+            height: 2rem;
+        }
+    }
+    .empty{
+        position: absolute;
+        top: 1.4rem;
+        left: 0;
+        width: 100%;
+        display: none;
+        .copy{
+            width: 1.32rem;
+            margin: 0 auto;
+        }
+    }
+}

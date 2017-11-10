@@ -1,0 +1,37 @@
+@import "all";
+.main{
+    width: 7.5rem;
+    .arrow{
+            position: absolute;
+            top: 0.65rem;
+            width: 6.1rem;
+            margin: 0 0 0 0.69rem;
+            z-index: 888;
+            .arrows{
+                display: block;
+                width: 0.2rem;
+                height: 0.36rem;
+                float: left;
+                background: url(../img/arrow.png) no-repeat center;
+                background-size: contain;
+            }
+            .jiah{
+                display: block;
+                width: 0.36rem;
+                height: 0.36rem;
+                float: right;
+                background: url(../img/plus.png) no-repeat center;
+                background-size: contain;
+                position: relative;
+                .more{
+                    position: absolute;
+                    top: 0.45rem;
+                    right: 0.02rem;
+                    display: none;
+                    width: 1.9rem;
+                    height: 2.6rem;
+                    z-index: 999;
+                }
+            }
+        }
+}

@@ -1,0 +1,180 @@
+body,
+div,
+nav,
+ul,
+li,
+a,
+p,
+b,
+h2 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+a,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+ul {
+  list-style: none; }
+
+img {
+  border: none;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #fcf5eb; }
+
+.subnav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fffcf8;
+  z-index: 999; }
+  .subnav a {
+    display: inline-block;
+    width: 1.26rem; }
+    .subnav a img {
+      height: 0.7rem; }
+  .subnav img:first-child {
+    margin-left: 0.42rem; }
+
+.main {
+  width: 7.5rem; }
+  .main header {
+    width: 100%;
+    height: 10.4rem;
+    background: url(../img/background.png) no-repeat center;
+    background-size: contain; }
+    .main header .arrow {
+      width: 6.62rem;
+      margin: 0 0 0 0.69rem;
+      padding-top: 0.65rem;
+      text-align: center; }
+      .main header .arrow .arrows {
+        display: block;
+        width: 0.2rem;
+        height: 0.36rem;
+        float: left;
+        background: url(../img/arrow.png) no-repeat center;
+        background-size: contain; }
+      .main header .arrow .jiah {
+        display: block;
+        width: 0.36rem;
+        height: 0.36rem;
+        float: right;
+        background: url(../img/plus.png) no-repeat center;
+        background-size: contain;
+        margin-right: 0.3rem;
+        position: relative; }
+        .main header .arrow .jiah .more {
+          position: absolute;
+          top: 0.45rem;
+          right: 0.02rem;
+          display: none;
+          width: 1.9rem;
+          height: 2.6rem;
+          z-index: 999; }
+      .main header .arrow h2 {
+        line-height: 0.36rem;
+        font-size: 0.32rem;
+        color: #333;
+        float: left;
+        margin-left: 35%; }
+    .main header .sample {
+      width: 6.34rem;
+      height: 8.45rem;
+      margin: 0.55rem auto;
+      background: url(../img/rectangle.png) no-repeat center;
+      background-size: contain;
+      position: relative; }
+      .main header .sample img {
+        width: 1.56rem;
+        height: 4.04rem;
+        margin: 0.4rem 0 0 0.9rem; }
+      .main header .sample .ziti {
+        width: 2.56rem;
+        height: 1.7rem;
+        float: right;
+        margin: 1.23rem 0.7rem 0 0;
+        text-align: left; }
+        .main header .sample .ziti h2 {
+          font-size: 0.26rem;
+          color: #333;
+          margin-bottom: 0.22rem; }
+        .main header .sample .ziti div {
+          margin-bottom: 0.33rem;
+          width: 1.25rem;
+          border: solid 1px #333;
+          margin-left: 0.15rem; }
+        .main header .sample .ziti p {
+          font-size: 0.24rem;
+          color: #333;
+          margin-left: 0.15rem; }
+      .main header .sample .inf {
+        width: 4.6rem;
+        height: 2rem; }
+      .main header .sample .gujia {
+        font-size: 0.36rem;
+        color: #333;
+        text-align: right;
+        margin-right: 0.8rem; }
+        .main header .sample .gujia span {
+          font-size: 0.4rem;
+          color: #A31515; }
+      .main header .sample a {
+        display: block;
+        position: absolute;
+        bottom: 0.35rem;
+        right: 0.28rem;
+        width: 0.3rem;
+        height: 0.31rem;
+        background: url(../img/question.png) no-repeat center;
+        background-size: contain; }
+  .main .content {
+    width: 6.34rem;
+    margin: 0 auto;
+    text-align: right; }
+    .main .content p {
+      font-size: 0.5rem;
+      color: #333; }
+      .main .content p span {
+        font-size: 0.52rem;
+        color: #A31515; }
+  .main footer {
+    width: 100%;
+    height: 0.9rem;
+    font-size: 0;
+    background: #FFFCF8;
+    margin-top: 0.8rem; }
+    .main footer a {
+      float: left;
+      width: 1rem;
+      height: 0.98rem; }
+    .main footer .dai {
+      display: block;
+      width: 0.65rem;
+      height: 0.8rem;
+      background: url(../img/shopping.png) no-repeat center;
+      background-size: contain;
+      margin: 0.17rem 0 0 0.43rem; }
+    .main footer .jiar {
+      display: block;
+      width: 2.19rem;
+      height: 0.98rem;
+      background: url(../img/addtobag.png) no-repeat center;
+      background-size: contain;
+      float: left;
+      margin-left: 0.95rem; }
+    .main footer .jiesuan {
+      background: url(../img/settlement1.png) no-repeat center;
+      background-size: cover;
+      margin: 0; }
+    .main footer .kefu {
+      background: url(../img/kefu.png) no-repeat center;
+      background-size: cover; }
+
+/*# sourceMappingURL=settle.css.map */

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>注册页面</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/enroll.css" />
+		<script type="text/javascript" src="dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/auto-size.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;z-index:999;"></div>
+			<!--header开始-->
+			<header>
+				<a href="start.html" class="arrow"></a>
+				<a href="login.html" class="login">登录</a>
+				<div style="clear: both;"></div>
+			</header>
+			<!--header结束-->
+			<!--content开始-->
+			<div class="content">
+				<div class="phone">
+					<h2>手机号</h2>
+					<input type="text" id="phone" />
+					<div class="security">
+						<a href="javascript:;" class="second" id="second">60s</a>
+						<a href="javascript:;" id="send">发送验证码</a>
+					</div>
+				</div>
+				<div class="code">
+					验证码
+					<br/><input type="text" id="auth" />
+				</div>
+				<div class="arr">
+					<a href="#" id="subm"></a>
+				</div>
+			</div>
+			<!--content结束-->
+		</div>
+	</body>
+	<script>
+		//手机号验证
+		$('#subm').click(function() {
+			var phone = $('#phone');
+			var auth=$('#auth');
+			var msg = "";
+			if($.trim(auth.val()) == "") {
+				msg = "请输入验证码！";
+				auth.focus();
+			} else if(!/^\w{6,20}$/.test($.trim(auth.val()))) {
+				msg = "验证码不正确！请重新输入！";
+				auth.focus();
+			}
+			if($.trim(phone.val()) == "") {
+				msg = "手机号不能为空！";
+				phone.focus();
+			} else if(!/^1[34578]\d{9}$/.test($.trim(phone.val()))) {
+				msg = "手机号格式不正确！请重新输入！";
+				phone.focus();
+			}
+			if(msg != "") {
+				alert(msg);
+			} else {
+				$('#subm').attr('href', 'login.html');
+			}
+		});
+		//变色he验证码验证
+		$('input').bind("input propertychange", function() {
+			var phone = $('#phone').val().length
+			var pwd = $('#auth').val().length
+			if(phone == 11 && pwd == 4) {
+				$('#subm').css({
+					'background': "url('img/imgs/fanhui-2.png')",
+					'background-size': 'cover'
+				});
+			}
+			if(phone == 11) {
+				$('.security').css('display', 'block');
+			} else {
+				$('.security').css('display', 'none');
+			}
+			$('#send').click(function() {
+				$('#second').css('visibility', 'visible');
+				var timer = setInterval(countdown, 1000);
+				var i = parseInt($('#second').html());
+
+				function countdown() {
+					i--;
+					$('#send').attr('disabled', 'true');
+					$('#second').html(i + 's');
+					if(i == 0) {
+						clearInterval(timer);
+						$('#second').css('visibility', 'visible');
+						$('#send').removeAttr('disabled', 'true');
+						$('#second').html('60s');
+					}
+				}
+			})
+		});
+		$("body").bind("touchmove", function(event) {
+			event.preventDefault();
+		});
+	</script>
+
+</html>

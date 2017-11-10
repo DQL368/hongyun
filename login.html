@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/login.css" />
+		<script type="text/javascript" src="dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/auto-size.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<!--header开始-->
+			<header>
+				<a href="start.html" class="arrow"></a>
+				<a href="setting.html" class="forget">忘记密码</a>
+				<div style="clear: both;"></div>
+			</header>
+			<!--header结束-->
+			<!--content开始-->
+			<div class="content">
+				<form>
+					<div class="phone">
+						<label>
+							<h2>手机号</h2>
+							<input type="text" placeholder="输入数字" id="phone"/>
+						</label>
+					</div>
+					<div class="code">
+						<label>
+							密码
+							<br/><input type="password" id="password"/>
+						</label>
+					</div>
+					<div class="show">
+						<span class="kuang"></span>
+						<span class="gou"></span>
+						<p>显示密码</p>
+					</div>
+					<div class="arr">
+						<a href="#" id="subm"></a>
+					</div>
+				</form>
+			</div>
+			<!--content结束-->
+		</div>
+	</body>
+	<script>
+		//显示隐藏密码
+		$('.show').click(function() {
+			$('.gou').toggleClass('active');
+			if($('.gou').hasClass('active')) {
+				$('.code input').attr('type', 'text');
+			} else {
+				$('.code input').attr('type', 'password');
+			}
+		});
+		//登录验证
+		$('#subm').click(function() {
+			var phone = $('#phone');
+			var pwd = $('#password');
+			var msg = "";
+			if($.trim(phone.val()) == "") {
+				msg = "手机号不能为空！";
+				phone.focus();
+			} else if(!/^1[34578]\d{9}$/.test($.trim(phone.val()))) {
+				msg = "手机号格式不正确！请重新输入！";
+				phone.focus();
+			} else if($.trim(pwd.val()) == "") {
+				msg = "密码不能为空！";
+				pwd.focus();
+			} else if(!/^\w{6,20}$/.test($.trim(pwd.val()))) {
+				msg = "密码格式不正确！请重新输入！";
+				pwd.focus();
+			}
+			if(msg != "") {
+				alert(msg);
+			}else{
+				localStorage.phone=phone.val();
+				localStorage.pwd=pwd.val();
+				$('#subm').attr('href','index.html');
+			}
+		});
+		//变色
+		$('input').bind("input propertychange",function(){
+			var phone=$('#phone').val().length
+			var pwd=$('#password').val().length
+				if (phone==11&&pwd==4) {
+				$('#subm').css({
+					'background':"url('img/imgs/fanhui-2.png')",
+					'background-size':'cover'
+				});
+			}
+		});
+		$("body").bind("touchmove",function(event){event.preventDefault();});
+	</script>
+
+</html>

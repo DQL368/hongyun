@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>会员等级</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/grade.css"/>
+		<script type="text/javascript" src="dist/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/auto-size.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<!--header开始-->
+			<header>
+				<a href="javascript:;" id="arr">
+					<img src="img/arrow.png" />
+				</a>
+				<h2>会员等级</h2>
+				<div style="clear: both;"></div>
+				<div class="logo">
+					<img src="img/toux.png" />
+					<p>
+						近一年消费金额<br />
+						<span>￥ 40000</span>
+					</p>
+					<div style="clear: both;"></div>
+				</div>
+			</header>
+			<!--header结束-->
+			<div class="swiper-container content">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/neir-3.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="img/neir-3.png" />
+					</div>
+					<div class="swiper-slide">
+						<img src="img/neir-3.png" />
+					</div>
+				</div>
+				<img src="img/arrowright.png" class="arrow"/>
+			</div>
+		</div>
+	</body>
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 'auto',
+		})
+		$('.arrow').click(function() {
+			swiper.slideNext(false, 1000);
+		})
+		$('#arr').click(function(event) {
+			event.preventDefault();
+			if(window.history.length >= 1) {
+				window.history.back();
+			} else {
+				window.location.href = "index.html";
+			}
+		});
+		$("body").bind("touchmove",function(event){event.preventDefault();});
+	</script>
+</html>

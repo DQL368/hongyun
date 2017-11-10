@@ -1,0 +1,84 @@
+body,
+div,
+nav,
+ul,
+li,
+a,
+p,
+b,
+h2 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+a,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+ul {
+  list-style: none; }
+
+img {
+  border: none;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #fcf5eb; }
+
+.subnav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fffcf8;
+  z-index: 999; }
+  .subnav a {
+    display: inline-block;
+    width: 1.26rem; }
+    .subnav a img {
+      height: 0.7rem; }
+  .subnav img:first-child {
+    margin-left: 0.42rem; }
+
+.main {
+  width: 7.5rem;
+  position: relative; }
+  .main header {
+    width: 6rem;
+    margin: 0.4rem auto;
+    text-align: center; }
+    .main header a {
+      display: block;
+      width: 0.2rem;
+      height: 0.36rem;
+      position: relative;
+      float: left; }
+      .main header a img {
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .main header h2 {
+      font-size: 0.36rem;
+      color: #333;
+      line-height: 0.36rem; }
+  .main .content {
+    width: 100%;
+    position: relative; }
+    .main .content .list {
+      width: 100%; }
+    .main .content .remove {
+      width: 1.2rem;
+      height: 2rem; }
+  .main .empty {
+    position: absolute;
+    top: 1.4rem;
+    left: 0;
+    width: 100%;
+    display: none; }
+    .main .empty .copy {
+      width: 1.32rem;
+      margin: 0 auto; }
+
+/*# sourceMappingURL=collect.css.map */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/detail.css" />
+		<script type="text/javascript" src="dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/auto-size.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;z-index: 999;"></div>
+			<!--header部分开始-->
+			<header>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide details">
+							<a href="special.html">
+								<img src="img/details.png" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="special.html">
+								<img src="img/detail-1.png" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="special.html">
+								<img src="img/detail-2.png" />
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="special.html">
+								<img src="img/detail-3.png" />
+							</a>
+						</div>
+					</div>
+					<div class="swiper-pagination circle"></div>
+				</div>
+				<div class="arrow">
+					<a href="javascript:;" class="arrows"></a>
+					<a href="javascript:;" class="jiah">
+						<div class="more">
+							<img src="img/more.png" />
+						</div>
+					</a>
+				</div>
+				<div class="kind">
+					<img src="img/mingz.png" class="mingz" />
+					<img src="img/youhui.png" class="youhui" />
+				</div>
+			</header>
+			<!--header部分结束-->
+		</div>
+		<!--footer开始-->
+		<footer>
+			<a href="service.html" class="kefu dai"></a>
+			<a href="shopbag.html" class="dai"></a>
+			<a href="shopbag.html" class="jiar"></a>
+			<a href="settle.html" class="jiesuan jiar"></a>
+			<div style="clear: both;"></div>
+		</footer>
+		<!--footer结束-->
+	</body>
+	<script>
+		var mySwiper = new Swiper('.main .swiper-container', {
+			direction: 'horizontal',
+			loop: true,
+			autoplay: 4000,
+			pagination: '.swiper-pagination',
+			autoplayDisableOnInteraction: false
+		});
+		$('.jiah').click(function() {
+			$('.more').toggle();
+		})
+		$('.arrows').click(function(event) {
+			event.preventDefault();
+			if(window.history.length >= 1) {
+				window.history.back();
+			} else {
+				window.location.href = "index.html";
+			}
+		});
+	</script>
+
+</html>

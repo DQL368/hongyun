@@ -1,0 +1,83 @@
+body,
+div,
+nav,
+ul,
+li,
+a,
+p,
+b,
+h2 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+a,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+ul {
+  list-style: none; }
+
+img {
+  border: none;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #fcf5eb; }
+
+.subnav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fffcf8;
+  z-index: 999; }
+  .subnav a {
+    display: inline-block;
+    width: 1.26rem; }
+    .subnav a img {
+      height: 0.7rem; }
+  .subnav img:first-child {
+    margin-left: 0.42rem; }
+
+html, body, .main {
+  width: 100%;
+  height: 100%; }
+
+.main {
+  width: 7.5rem; }
+  .main a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .main .banner {
+    background: url(../img/guide-1.png) no-repeat center;
+    background-size: 100% 100%; }
+  .main .banner-2 {
+    background: url(../img/guide-2.png) no-repeat center;
+    background-size: 100% 100%; }
+  .main .banner-3 {
+    background: url(../img/guide-3.png) no-repeat center;
+    background-size: 100% 100%; }
+  .main .tiaog {
+    position: fixed;
+    top: 0.52rem;
+    right: 0.14rem;
+    z-index: 998; }
+    .main .tiaog a {
+      display: block;
+      width: 1.16rem;
+      height: 0.46rem;
+      background: url(../img/guide.png) no-repeat center;
+      background-size: 100% 100%;
+      position: relative; }
+      .main .tiaog a span {
+        position: absolute;
+        top: 0.04rem;
+        right: 0.1rem;
+        font-size: 0.26rem;
+        color: #A31515; }
+
+/*# sourceMappingURL=guide.css.map */

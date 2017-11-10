@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>分类</title>
+		<link rel="stylesheet" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/classify.css"/>
+		<script type="text/javascript" src="dist/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/auto-size.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;"></div>
+			<!--header部分开始-->
+			<header>
+				<!--导航栏开始-->
+				<div class="nav">
+					<img src="img/menu.png" class="menu" />
+					<input type="text" placeholder="搜索:香云纱" />
+					<img src="img/message.png" class="message" />
+				</div>
+				<!--导航栏结束-->
+			</header>
+			<!--header部分结束-->
+			<!--content开始-->
+			<div class="content">
+				<!--content左边开始-->
+				<div class="content-l">
+					<ul>
+						<li>
+							<a href="#">品牌</a>
+						</li>
+						<li>
+							<a href="#">推荐</a>
+						</li>
+						<li>
+							<a href="#">面料</a>
+						</li>
+						<li>
+							<a href="#">主题</a>
+						</li>
+						<li>
+							<a href="#">名品</a>
+						</li>
+						<li>
+							<a href="#">搭配</a>
+						</li>
+						<li>
+							<a href="#">私人售卖</a>
+						</li>
+					</ul>
+				</div>
+				<!--content左边结束-->
+				<!--content右边开始-->
+				<div class="content-r">
+					<div class="banner">
+						<img src="img/cation-1.png" />
+					</div>
+					<div class="list">
+						<img src="img/cation.png" style="margin-right: 0.15rem;"/>
+						<img src="img/cation-4.png" />
+						<img src="img/cation-3.png" style="margin-right: 0.15rem;"/>
+						<img src="img/cation-2.png" />
+					</div>
+				</div>
+				<!--content右边结束-->
+				<div style="clear: both;"></div>
+			</div>
+			<!--content结束-->
+			<!--底部导航栏开始-->
+			<div class="subnav">
+				<a href="#">
+					<img src="img/home.png" style="width: 0.43rem;" />
+				</a>
+				<a href="#">
+					<img src="img/classify.png" style="width: 0.48rem; height: 0.62rem;" />
+				</a>
+				<a href="#">
+					<img src="img/custom.png" style="width: 0.42rem;" />
+				</a>
+				<a href="#">
+					<img src="img/shopping bag.png" style="width: 0.64rem;" />
+				</a>
+				<a href="#">
+					<img src="img/my.png" style="width: 0.42rem;" />
+				</a>
+			</div>
+			<!--底部导航栏结束-->
+		</div>
+	</body>
+	<script>
+		var isloading = false;
+
+			function getViewportSize(w) {
+				//使用指定的窗口，如果不带参数则使用当前窗口
+				w = w || window;
+				//除了IE8及更早的版本以外，其他浏览器都能用
+				if(w.innerWidth != null) return {
+					w: w.innerWidth,
+					h: w.innerHeight
+				};
+				//对标准模式下的IE（或任意浏览器）
+				var d = w.document;
+				if(document.compatMode == "CSS1Compat")
+					return {
+						w: d.documentElement.clientWidth,
+						h: d.documentElement.clientHeight
+					};
+				//对怪异模式下的浏览器
+				return {
+					w: d.body.clientWidth,
+					h: d.body.clientHeight
+				};
+			}
+
+			//检测滚动条是否滚动到页面底部
+			function isScrollToPageBottom() {
+				//文档高度
+				var documentHeight = document.documentElement.offsetHeight;
+				var viewPortHeight = getViewportSize().h;
+				var scrollHeight = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+				return documentHeight - viewPortHeight - scrollHeight < 20;
+			}
+
+			//页面滚到底部的时候加载新的图片
+			function watchScroll() {
+				if(!isScrollToPageBottom()) {
+					setTimeout(arguments.callee, 900);
+					return;
+				} else {
+					getMore();
+				}
+			}
+
+			function getMore() {
+				var oDiv = $(".list img").clone();
+				$(".list").append(oDiv);
+				isScrollToPageBottom();
+				watchScroll();
+			}
+			isScrollToPageBottom();
+			watchScroll();
+	</script>
+</html>

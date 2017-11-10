@@ -1,0 +1,125 @@
+@import "all";
+//body{
+//  overflow: hidden;
+//}
+.main{
+    width: 7.5rem;
+    height: 13.34rem;
+    background: url(../img/imgs/bk-1.png) no-repeat center;
+    background-size: 7.5rem 13.34rem;
+    header{
+        width: 100%;
+        .arrow{
+            display: block;
+            width: 0.2rem;
+            height: 0.36rem;
+            float: left;
+            margin-left: 0.48rem;
+            padding-top: 0.8rem;
+            background: url(../img/imgs/arrow.png) no-repeat center;
+            background-size: contain;
+        }
+        .forget{
+            font-size: 0.28rem;
+            color: #A31515;
+            float: right;
+            padding-top: 0.4rem;
+            margin-right: 1.2rem;
+        }
+    }
+    .content{
+        width: 6.25rem;
+        margin: 0 auto;
+        margin-top: 2.55rem;
+        .phone{
+            width: 100%;
+            height: 1.5rem;
+            border-bottom: solid 1px #e2b4ae;
+            font-size: 0;
+            position: relative;
+            h2{
+                font-size: 0.32rem;
+                color: #A31515;
+                font-weight: normal;
+            }
+            input{
+                border: none;
+                outline: none;
+                width: 4.02rem;
+                height: 0.64rem;
+                font-size: 0.5rem;
+                color: #A31515;
+                position: relative;
+                background: none;
+                margin-top: 0.3rem;
+            }
+            input::-webkit-input-placeholder{
+                color: #A31515;
+            }
+            input::-ms-input-placeholder{
+                color: #A31515;
+            }
+        }
+        .code{
+            width: 100%;
+            height: 1.5rem;
+            border-bottom: solid 1px #e2b4ae;
+            margin-top: 0.53rem;
+            font-size: 0.32rem;
+            color: #A31515;
+            input{
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 0.32rem;
+                color: #A31515;
+                margin-top: 0.4rem;
+                font-size: 0.5rem;
+            }
+        }
+        .show{
+            width: 1.45rem;
+            height: 0.4rem;
+            padding-left: 0.35rem;
+            font-size: 0.32rem;
+            color: #A31515;
+            position: relative;
+            margin-top: 0.5rem;
+            .kuang{
+                position: absolute;
+                display: block;
+                width: 0.22rem;
+                height: 0.22rem;
+                top: 30%;
+                left: 0;
+                background: url(../img/imgs/kuang.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+            .gou{
+                position: absolute;
+                display: block;
+                width: 0.17rem;
+                height: 0.13rem;
+                top: 37%;
+                left: 0.02rem;
+            }
+            .active{
+                background: url(../img/imgs/gou.png) no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        .arr{
+            width: 0.9rem;
+            height: 0.9rem;
+            float: right;
+            a{
+                display: block;
+                width: 0.9rem;
+                height: 0.9rem;
+                background: url(../img/imgs/fanhui-1.png) no-repeat center;
+                background-size: cover;
+                margin-top: 0.55rem;
+            }
+        }
+    }
+}

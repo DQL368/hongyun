@@ -1,0 +1,58 @@
+@import "all";
+//body{
+//  overflow: hidden;
+//}
+.main{
+    width: 7.5rem;
+//  height: 13.34rem;
+    background: url(../img/imgs/bk.png) no-repeat center;
+    background-size: cover;
+    header{
+        width: 100%;
+        padding-top: 1.2rem;
+        .welcome{
+            display: block;
+            width: 4.12rem;
+            height: 2.26rem;
+            margin: 0 0 1.22rem 0.64rem;
+            background: url(../img/imgs/welcome.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+        a{
+            display: block;
+            width: 6.2rem;
+            height: 1rem;
+            margin-left: 0.64rem;
+        }
+        .login{
+            background: url(../img/imgs/dengl.png) no-repeat center;
+            background-size: 100% 100%;
+            margin-bottom: 0.6rem;
+        }
+        .enroll{
+            background: url(../img/imgs/zhuc.png) no-repeat center;
+            background-size: 100% 100%;
+            margin-bottom: 2.3rem;
+        }
+        img{
+            width: 6.5rem;
+            height: 0.31rem;
+            margin-left: 0.64rem;
+        }
+        .tenx{
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: url(../img/imgs/qq.png) no-repeat center;
+            background-size: 100% 100%;
+            margin-left: 2.55rem;
+        }
+        .weix{
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: url(../img/imgs/weix-2.png) no-repeat center;
+            background-size: 100% 100%;
+        }
+    }
+}

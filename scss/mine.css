@@ -1,0 +1,122 @@
+body,
+div,
+nav,
+ul,
+li,
+a,
+p,
+b,
+h2 {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+a,
+input {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+ul {
+  list-style: none; }
+
+img {
+  border: none;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #fcf5eb; }
+
+.subnav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fffcf8;
+  z-index: 999; }
+  .subnav a {
+    display: inline-block;
+    width: 1.26rem; }
+    .subnav a img {
+      height: 0.7rem; }
+  .subnav img:first-child {
+    margin-left: 0.42rem; }
+
+.main {
+  width: 7.5rem; }
+  .main header {
+    width: 100%;
+    height: 4rem;
+    background: url(../img/minebk.png) no-repeat center;
+    background-size: contain; }
+    .main header .logo {
+      width: 3.55rem;
+      height: 2.02rem;
+      margin-left: 0.37rem;
+      position: relative;
+      padding-top: 0.62rem; }
+      .main header .logo a {
+        display: block;
+        width: 3.55rem;
+        height: 2.02rem; }
+        .main header .logo a img {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin: 0.2rem 0 0 0.2rem; }
+        .main header .logo a p {
+          font-size: 0.26rem;
+          color: #333;
+          float: right;
+          margin: 0.55rem 0.3rem 0 0; }
+        .main header .logo a .vip {
+          width: 1.22rem;
+          height: 0.4rem;
+          position: absolute;
+          bottom: 0.54rem;
+          right: 0.22rem; }
+  .main .content {
+    width: 100%;
+    padding-bottom: 1.32rem; }
+    .main .content .order {
+      width: 6.2rem;
+      margin: 0.43rem auto;
+      position: relative; }
+      .main .content .order a {
+        display: block;
+        width: 2rem;
+        height: 1.3rem;
+        margin: 0 0.1rem 0.1rem 0;
+        float: left; }
+        .main .content .order a .all {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 2rem;
+          height: 2.7rem;
+          margin: 0; }
+  .main .member {
+    width: 100%; }
+    .main .member ul {
+      width: 100%; }
+      .main .member ul li {
+        width: 6.2rem;
+        height: 1.1rem;
+        margin: 0 auto;
+        line-height: 1.1rem;
+        border-bottom: solid 1px #d4cec6;
+        font-size: 0; }
+        .main .member ul li h2 {
+          font-size: 0.35rem;
+          color: #333;
+          float: left;
+          font-weight: normal; }
+        .main .member ul li a {
+          display: block;
+          width: 0.51rem;
+          height: 0.51rem;
+          float: right;
+          margin-top: 0.28rem; }
+          .main .member ul li a img {
+            margin-bottom: 0.1rem; }
+
+/*# sourceMappingURL=mine.css.map */

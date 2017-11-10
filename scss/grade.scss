@@ -1,0 +1,69 @@
+@import "all";
+.main{
+    width: 7.5rem;
+    header{
+        width: 100%;
+        height: 4.06rem;
+        background: url(../img/bk.png) no-repeat center;
+        background-size: contain;
+        text-align: center;
+        a{
+            display: block;
+            width: 0.2rem;
+            height: 0.36rem;
+            position: relative;
+            float: left;
+            margin-left: 0.65rem;
+            margin-top: 0.65rem;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        h2{
+            float: left;
+            font-size: 0.36rem;
+            color: #333;
+            margin-left: 30%;
+            margin-top: 0.55rem;
+        }
+        .logo{
+            width: 4.2rem;
+            height: 2rem;
+            margin-left: 0.6rem;
+            margin-top: 0.3rem;
+            img{
+                width: 1.92rem;
+                height: 1.92rem;
+                float: left;
+            }
+            p{
+                font-size: 0.3rem;
+                color: #333;
+                float: right;
+                margin-top: 0.6rem;
+                text-align: left;
+                span{
+                    font-size: 0.3rem;
+                    color: #A31515;
+                }
+            }
+        }
+    }
+    .content{
+        position: relative;
+        img{
+            width: 5.52rem;
+            margin-left: 1.08rem;
+            margin-top: 0.3rem;
+        }
+        .arrow{
+            position: absolute;
+            top: 50%;
+            right: 0.55rem;
+            width: 0.08rem;
+            height: 0.16rem;
+        }
+    }
+}

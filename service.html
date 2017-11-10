@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>客服</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/service.css" />
+		<script type="text/javascript" src="dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/auto-size.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;z-index:999;"></div>
+			<!--header开始-->
+			<header>
+				<div class="arrow">
+					<a href="mine.html" class="arrows"></a>
+					<h2>小雅</h2>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="list">
+					<a href="#">
+						<img src="img/shangp.png" />
+					</a>
+					<div style="clear: both;"></div>
+				</div>
+			</header>
+			<!--header结束-->
+			<div class="content" id="content">
+				<div class="toux">
+					<a href="javascript:;" class="tou"></a>
+					<a href="javascript:;" class="wenz"></a>
+				</div>
+				<div class="er-g"></div>
+			</div>
+			<footer>
+				<a href="javascript:;" class="wif"></a>
+				<input type="text" id="inp" />
+				<a href="javascript:;" class="lian"></a>
+				<a href="javascript:;" class="jia"></a>
+			</footer>
+		</div>
+	</body>
+	<script>
+		var er_key = '882a3792dae44ab5a49e5cffadf1ca20'; //填写你的 API KEY
+		$("#inp").on("keydown", function(e) {
+			if(e.keyCode == 13) {
+				var a = $('.er-g'),
+					b = $('#inp'),
+					c = $('#inp').val(),
+					d = $("#content");
+				a.before('<div class="user-que clear"><img src="img/imgs/china.png"><p>'+c+'</p></div>');
+				window.scrollTo(0,d.height());
+				b.val('');
+				$.getJSON('http://www.tuling123.com/openapi/api?key='+er_key+'&info='+c,function(data) {
+					a.before('<div class="ans-box clear"><img src="img/toux1.png"><p>'+data.text+'</p></div>');
+					window.scrollTo(0,d.height());
+				});
+			}
+		});
+	</script>
+
+</html>

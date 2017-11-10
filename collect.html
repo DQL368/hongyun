@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>收藏</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/collect.css"/>
+		<script type="text/javascript" src="dist/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/auto-size.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;"></div>
+			<!--header部分开始-->
+			<header>
+				<a href="javascript:;" class="arrows">
+					<img src="img/arrow.png" />
+				</a>
+				<h2>收藏</h2>
+			</header>
+			<!--header部分结束-->
+			<!--content开始-->
+			<div class="content" id="content">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide list">
+							<a href="detail.html">
+								<img src="img/qipao1.png" />
+							</a>
+						</div>
+						<div class="swiper-slide remove">
+							<a href="javascript:;">
+								<img src="img/delete.png" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide list">
+							<a href="detail.html">
+								<img src="img/qipao2.png" />
+							</a>
+						</div>
+						<div class="swiper-slide remove">
+							<a href="javascript:;">
+								<img src="img/delete.png" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--content结束-->
+			<!--收藏为空显示-->
+			<div class="empty" id="empty">
+				<div class="copy">
+					<img src="img/wenan.png" />
+				</div>
+				<div class="tocll">
+					<a href="index.html">
+						<img src="img/icon1.png" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var mySwiper = new Swiper('.content .swiper-container', {
+				slidesPerView: 'auto',
+				initialSlide :0,
+			});
+			$(".remove").click(function(){
+				$(this).parent().parent().remove();
+				if ($('.content').html()==false) {
+					$('.empty').css('display','block');
+				};
+			});
+			//删除
+			$(".remove").click(function(){
+				$(this).parent().parent().remove();
+			});
+			$('.arrows').click(function(event) {
+				event.preventDefault();
+				if(window.history.length >= 1) {
+					window.history.back();
+				} else {
+					window.location.href = "index.html";
+				}
+			});
+	</script>
+</html>

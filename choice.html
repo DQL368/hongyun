@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>选择</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="scss/choice.css"/>
+		<script type="text/javascript" src="dist/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/auto-size.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;z-index: 999;"></div>
+			<!--header开始-->
+			<header>
+				<div class="arrow">
+					<a href="measure.html" class="arrows"></a>
+					<h2>选料订款</h2>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="title">
+					<h2>选料订款</h2>
+				</div>
+				<div class="list">
+					<ul>
+						<li class="mainl adtive">
+							<a href="#"></a>
+						</li>
+						<li class="kuans">
+							<a href="#" ></a>
+						</li>
+						<li class="shif">
+							<a href="#" ></a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<!--header结束-->
+			<!--content开始-->
+			<div class="content">
+				<h2>面料</h2>
+				<ul>
+					<li>
+						<a href="javascript:;">真丝</a>
+						<a href="javascript:;">桑波缎</a>
+						<a href="javascript:;">素绉缎</a>
+					</li>
+					<li>
+						<a href="javascript:;">杭罗</a>
+						<a href="javascript:;">双官绸</a>
+						<a href="javascript:;">古香缎</a>
+					</li>
+					<li>
+						<a href="javascript:;">丝绒</a>
+						<a href="javascript:;" class="active">香云纱</a>
+						<a href="javascript:;">织锦缎</a>
+					</li>
+					<li>
+						<a href="javascript:;">棉麻</a>
+						<a href="javascript:;">桑蝉丝</a>
+						<a href="javascript:;">柞蚕丝</a>
+					</li>
+				</ul>
+				<div class="cex">
+					<h3>色系</h3>
+					<p>红色系</p>
+					<a href="#">
+						<span>勃艮第酒红</span>
+						<img src="img/red2.png"/>
+					</a>
+					<a href="#" >
+						<span>锈红</span>
+						<img src="img/res1.png"/>
+					</a>
+					<a href="#">
+						<span>勃艮第酒红</span>
+						<img src="img/red2.png"/>
+					</a>
+					<a href="#" >
+						<span>锈红</span>
+						<img src="img/res1.png"/>
+					</a>
+					<a href="#">
+						<span>勃艮第酒红</span>
+						<img src="img/red2.png"/>
+					</a>
+					<a href="#" >
+						<span>锈红</span>
+						<img src="img/res1.png"/>
+					</a>
+				</div>
+				
+			</div>
+			<!--content结束-->
+			<!--footer开始-->
+			<footer>
+				<h2>效果预览</h2>
+				<div class="xiaog">
+					<img src="img/rotate1.png" class="rot" />
+					<img src="img/cloth1.png" class="cloth"/>
+					<div>
+						<p>长款月牙袖</p>
+						<p>香云纱群芳紫桔梗苏绣</p>
+						<p>中式复古连襟旗袍</p>
+					</div>
+				</div>
+				<a href="settle.html"></a>
+			</footer>
+			<!--footer结束-->
+		</div>
+	</body>
+	<script>
+		$('.list li').click(function(){
+			$('.list li').removeClass('adtive');
+			$(this).addClass('adtive');
+		});
+		$('.content a').click(function(){
+			$('.content a').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</html>

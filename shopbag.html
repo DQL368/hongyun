@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>购物袋</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css"/>
+		<link rel="stylesheet" href="scss/shopbag.css" />
+		<script type="text/javascript" src="dist/js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/auto-size.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	</head>
+	<body>
+		<div class="main">
+			<div style="position: fixed;top: 0;width: 100%;height: 0.4rem;"></div>
+			<!--header部分开始-->
+			<header>
+				<h2>购物袋</h2>
+				<a href="#">编辑</a>
+			</header>
+			<!--header部分结束-->
+			<!--content开始-->
+			<div class="content">
+				<div class="swiper-container parker">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide elect">
+							<img src="img/circle-2.png"/>
+						</div>
+						<div class="swiper-slide items">
+							<a href="#"><img src="img/shopbanner.png" /></a>
+						</div>
+						<div class="swiper-slide remove">
+							<a href="#"><img src="img/delete.png" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-container parker">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide elect">
+						<img src="img/circle-2.png" class="adtive"/>
+					</div>
+					<div class="swiper-slide items">
+						<a href="#"><img src="img/shopbanner.png" /></a>
+					</div>
+					<div class="swiper-slide remove">
+						<a href="#"><img src="img/delete.png" /></a>
+					</div>
+					</div>
+				</div>
+				<div class="swiper-container parker">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide elect">
+						<img src="img/circle-2.png"/>
+					</div>
+					<div class="swiper-slide items">
+						<a href="#"><img src="img/shopbanner.png" /></a>
+					</div>
+					<div class="swiper-slide remove">
+						<a href="#"><img src="img/delete.png" /></a>
+					</div>
+					</div>
+				</div>
+			</div>
+			<!--content结束-->
+			<!--footer开始-->
+			<footer>
+				<div class="check">
+					<img src="img/circle-2.png"/>
+					<h2>全选</h2>
+				</div>
+				<div class="total">
+					<p>总计 :<span class="money">￥ 2,379</span></p>
+					<p class="p1"><span>1件</span> 顺丰包邮</p>
+				</div>
+				<div class="clear">
+					<a href="#"><img src="img/balance-1.png" /></a>
+				</div>
+				<div style="clear: both;"></div>
+			</footer>
+			<!--footer结束-->
+			<!--底部导航栏开始-->
+			<div class="subnav">
+				<a href="index.html">
+					<img src="img/home.png" style="width: 0.43rem;" />
+				</a>
+				<a href="classify.html">
+					<img src="img/classify.png" style="width: 0.48rem; height: 0.62rem;" />
+				</a>
+				<a href="customization.html">
+					<img src="img/custom.png" style="width: 0.42rem;" />
+				</a>
+				<a href="shopbag.html">
+					<img src="img/images/shopping bag.png" style="width: 0.64rem;" />
+				</a>
+				<a href="mine.html">
+					<img src="img/my.png" style="width: 0.42rem;" />
+				</a>
+			</div>
+			<!--底部导航栏结束-->
+		</div>
+	</body>
+	<script>
+		var mySwiper = new Swiper('.content .swiper-container', {
+				slidesPerView: 'auto',
+				initialSlide :0,
+			});
+			//删除
+			$(".remove").click(function(){
+				$(this).parent().parent().remove();
+				var q=$('.adtive').length;
+				var price=q*2379;
+				$('.money').html('￥'+price.toLocaleString("en-US"));
+				$('.p1 span').html(q+'件');
+			});
+			//单选
+			$('.elect img').click(function(){
+				$(this).toggleClass('adtive');
+				var q=$('.adtive').length;
+				var price=q*2379;
+				$('.total span').html('￥'+price.toLocaleString("en-US"));
+				if (q==$('.elect img').length) {
+					$('.check img').addClass('adtive1');
+				} else{
+					$('.check img').removeClass('adtive1');
+				};
+				$('.p1 span').html(q+'件');
+			});
+			//全选
+			$('.check img').click(function(){
+				$('.check img').toggleClass('adtive1');
+				if ($(this).hasClass('adtive1')) {
+					$('.elect img').addClass('adtive');
+				} else{
+					$('.elect img').removeClass('adtive');
+				}
+				var q=$('.adtive').length;
+				var price=q*2379;
+				$('.money').html('￥'+price.toLocaleString("en-US"));
+				$('.p1 span').html(q+'件');
+			});
+	</script>
+</html>
